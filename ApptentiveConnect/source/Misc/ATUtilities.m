@@ -197,7 +197,7 @@ static NSDateFormatter *dateFormatter = nil;
 		newAlphaInfo = kCGImageAlphaPremultipliedFirst;
 	}
 	
-	bitmapContext = CGBitmapContextCreate(NULL, newWidth, newHeight, CGImageGetBitsPerComponent(imageRef), bytesPerRow, CGImageGetColorSpace(imageRef), newAlphaInfo);
+	bitmapContext = CGBitmapContextCreate(NULL, newWidth, newHeight, CGImageGetBitsPerComponent(imageRef), bytesPerRow, CGImageGetColorSpace(imageRef), (CGBitmapInfo)newAlphaInfo);
 	CGContextSetInterpolationQuality(bitmapContext, kCGInterpolationHigh);
 	
 	// The iPhone tries to be "smart" about image orientation, and messes it
