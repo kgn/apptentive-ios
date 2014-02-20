@@ -242,7 +242,7 @@ enum {
 		}
 		
 		CGSize cellSize = CGSizeMake(cell.textLabel.bounds.size.width, 1024);
-		UILineBreakMode lbm = cell.textLabel.lineBreakMode;
+		NSLineBreakMode lbm = cell.textLabel.lineBreakMode;
 		CGSize s = [cell.textLabel.text sizeWithFont:font constrainedToSize:cellSize lineBreakMode:lbm];
 		CGRect f = cell.textLabel.frame;
 		f.size = s;
