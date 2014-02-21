@@ -901,7 +901,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"Configuration is: ${CONFIGURATION}\"\nif [ \"${CONFIGURATION}\" = 'Release' ]; then\n    echo \"b\"\n    if [ -e \"${PROJECT_DIR}/resources/localization/English.lproj/Localizable.strings\" ]; then\n        echo \"c\"\n        rm \"${PROJECT_DIR}/resources/localization/English.lproj/Localizable.strings\"\n    fi\n    echo \"WTF\"\n    genstrings -s ATLocalizedString -o \"${PROJECT_DIR}/resources/localization/English.lproj\" \"${PROJECT_DIR}/source/\"*.m \"${PROJECT_DIR}/source/\"*/*.m\nfi\n";
+			shellScript = "echo \"Configuration is: ${CONFIGURATION}\"\nif [ \"${CONFIGURATION}\" = 'Release' ]; then\n    echo \"b\"\n    if [ -e \"${PROJECT_DIR}/resources/localization/en.lproj/Localizable.strings\" ]; then\n        echo \"c\"\n        rm \"${PROJECT_DIR}/resources/localization/en.lproj/Localizable.strings\"\n    fi\n    echo \"WTF\"\n    genstrings -s ATLocalizedString -o \"${PROJECT_DIR}/resources/localization/en.lproj\" \"${PROJECT_DIR}/source/\"*.m \"${PROJECT_DIR}/source/\"*/*.m\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
