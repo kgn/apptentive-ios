@@ -341,7 +341,7 @@ static ATAppRatingFlow *sharedRatingFlow = nil;
 	NSURL *url = [self URLForRatingApp];
 	[self setRatedApp];
 #if TARGET_OS_IPHONE
-	if ([SKStoreProductViewController class] != NULL && iTunesAppID) {
+	if ([SKStoreProductViewController class] != NULL && iTunesAppID && [ATUtilities versionString:[[UIDevice currentDevice] systemVersion] isLessThanVersionString:@"7.0"]) {
 #if TARGET_IPHONE_SIMULATOR
 		[self showUnableToOpenAppStoreDialog];
 #else
